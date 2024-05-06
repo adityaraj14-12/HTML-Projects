@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Hunt</title>
+    <link rel="icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Mystery Quest' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans Tagalog' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet'>
+    <style>
+        body{
+            background-image: url("bg.png");
+            background-color: #cccccc; /* Used if the image is unavailable */
+            height: 1000px; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+        }
+        .head{
+            color:rgb(44, 93, 216);
+            background-color: azure;
+            margin: auto;
+            text-align: center;
+            font-size: 2em;
+            font-family: 'Gabriela';
+            text-shadow: 4px 4px 4px #aaa;
+
+        }
+        .body{
+            text-align: center;
+            font-size: 3.7em;
+            color: rgb(247, 206, 0);
+            font-family: 'Aclonica';
+            text-shadow: 4px 4px 4px #aaa;
+
+        }
+        #navlinks li{
+            text-align: center;
+            list-style-type: none;
+            font-size: 80px;
+            font-weight: bold;
+            margin-top: 20px;
+           
+          
+        }
+        #navlinks a{
+            padding:8px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: black;
+        }
+        #navlinks a:hover{
+            color: white;
+            background-color: black;
+
+        }
+        .footer{
+            text-align: center;
+            color:#ffffff;
+            display: flex;
+            background-color:#26272b;
+            font-size: 18px;
+            font-family: 'Noto Sans Tagalog';
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="1.mp3" type="audio/mp3" />
+      </audio>
+    <div class="head">
+        <h1> GIFT HUNT </h1>
+    </div>
+    <div class="body">
+        <h3>Select Level</h3>
+        <ul id="navlinks">
+            <li><a href="easy.html">EASY</a></li>
+            <li><a href="medium.html">MEDIUM</a></li>
+            <li><a href="hard.html">HARD</a></li>
+        </ul>
+    
+       
+    </div>
+    <div class="footer">
+        
+        <h4> <b>How To Play </b><hr><p>The game hides three gifts (at random each time the game is loaded). <p>Your task is to find the gifts.</p></p><i><p> The user clicks inside any square for a guess. The square flips to show what’s hidden 
+            inside. In response to your guess, you will either see the “Gift” or “Miss” in the corresponding square. 
+            When you find all the gifts, the game ends by displaying your rating. In case you find the danger icon 
+            (only one such icon is hidden in the grid, at random) the game will reset and all progress is lost.</p><p>The game will have three levels: 3x3 grid, 4x4 grid and 6x6 grid.</p><i></h4>
+    </div>
+</body>
+</html>

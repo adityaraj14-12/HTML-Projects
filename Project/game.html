@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide n Seek</title>
+    <style>
+        body{
+
+            background-image: url("bg1.jpg");
+            background-color: #cccccc; /* Used if the image is unavailable */
+            height: 1000px; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+            text-align: center
+        }
+        .head{
+            color:rgb(255, 115, 0);
+            margin: auto;
+            font-family: 'cursive';
+
+            text-shadow: 4px 4px 4px #aaa;
+            font-size: 2em;
+        }
+        .footer{
+          font-family: 'Tangerine', serif;
+          font-size: 48px;
+          text-shadow: 4px 4px 4px #aaa;
+            margin-top: 12pc;
+            margin-right: 150px;
+            margin-left: 150px;
+            text-align: center;
+            color:#0d3c57;
+            font-size: 19px;
+            background-color: rgb(218, 223, 180);
+            padding: 2px;
+        }
+        button{
+            background-color: rgb(190, 222, 212);
+            margin: 6px;
+            background-image: url('box.jpg');
+            background-size: cover;
+            font-size:3rem;
+            padding: 30px 30px;
+        }
+        button:hover {
+            background-image: url('box1.jpg');
+            background-size: cover;
+            font-size:3rem;
+            padding: 30px 30px;
+
+    </style>
+</head>
+<body >
+    <div class="head">
+        <h1> GIFT HUNT </h1>
+    </div>
+    <Button id="0" onclick=check(0)  onclick=sound()"> 📦</Button>
+    <Button id="1" onclick=check(1)  >📦</Button>
+    <Button id="2" onclick=check(2)  >📦</Button>
+    <Button id="3" onclick=check(3)  >📦</Button>
+    <Button id="4" onclick=check(4)  >📦</Button>
+    <br>
+    <Button id="5" onclick=check(5)  >📦</Button>
+    <Button id="6" onclick=check(6)  >📦</Button>
+    <Button id="7" onclick=check(7)  >📦</Button>
+    <Button id="8" onclick=check(8)  >📦</Button>
+    <Button id="9" onclick=check(9)  >📦</Button>
+    <br>
+    <Button id="10" onclick=check(10)  >📦</Button>
+    <Button id="11" onclick=check(11)  >📦</Button>
+    <Button id="12" onclick=check(12)  >📦</Button>
+    <Button id="13" onclick=check(13)  >📦</Button>
+    <Button id="14" onclick=check(14)  >📦</Button>
+
+    <div class="footer">
+        <h3> <b>How To Play </b></h4>
+        <p><hr>In a box,there are three gift's and one bomb. <br> Find all the gifts in a minimum attempt.<br>
+            You will won the game.<br> But if you clicked on bomb then you will lose this game</p>
+            <h1>Good Luck!</h1>
+    </div>
+
+    <Script>
+        var r;
+        var arr=new Array(15);
+        for(var i=0;i<=14;i++){
+            arr[i]="🚫";
+        }
+        for(var i=0;i<3;i++){
+            r=Math.floor(Math.random()*(14));
+            if(arr[r]=="🚫")
+                arr[r]="🎁";
+            else
+                i--;
+        }
+        for(var i=0;i<1;i++){
+            r=Math.floor(Math.random()*(14));
+            if(arr[r]=="🚫")
+                arr[r]="☠️";
+            else
+                i--;
+        }
+        console.log(arr);
+        var n;
+        var count=0;
+        var score=0;
+        function check(n){
+            score++;
+            document.getElementById(n).innerHTML=arr[n];
+            document.getElementById(n).style["background"]="FFFFFF";
+            if(arr[n]=="🎁"){
+                count++;
+                if(count==3){
+                    setInterval(function () {element.innerHTML += ""}, 100000);
+
+                alert("you won in "+score+" tries");
+                window.location.href = window.location.href;}
+            }else if(arr[n]=="☠️"){
+                alert("you lost");
+                window.location.href = window.location.href;
+            }
+        }
+function sound(){
+     var snd = new Audio('1.mp3')//wav is also supported
+     snd.play()//plays the sound
+}
+    </Script>
+</body>
+</html>
